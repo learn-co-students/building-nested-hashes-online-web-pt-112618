@@ -1,3 +1,5 @@
+
+
 def bonus
   epic_tragedy = {
    :montague => {
@@ -25,6 +27,18 @@ def bonus
 epic_tragedy[:montague][:hero][:status] = "dead"
 epic_tragedy[:capulet][:heroine][:status] = "dead"
 
+#or use iteration
+
+epic_tragedy.each do |key, value|
+  value.each do |key2, value2|
+    if key2 == :hero || key2 == :heroine
+      value2[:status] = "dead"
+end   
+ 
+
+
   #Don't touch the following line! The `bonus` method must return our newly modified epic tragedy hash
   epic_tragedy
+end
+end
 end
