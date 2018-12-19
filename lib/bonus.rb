@@ -29,9 +29,9 @@ epic_tragedy[:capulet][:heroine][:status] = "dead"
 
 #or use iteration
 
-epic_tragedy.each do |key, value|
-  value.each do |key2, value2|
-    if key2 == :hero || key2 == :heroine
+epic_tragedy.each do |key, value| #you need a key and a value to access hash (this accesses the first key)
+  value.each do |key2, value2| #this accesses the 2nd key
+    if key2 == :hero || key2 == :heroine #If the hash contain :hero OR :heroine then set statu within value2 to "dead"
       value2[:status] = "dead"
 end   
  
